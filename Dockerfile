@@ -4,8 +4,8 @@ FROM --platform=linux/amd64 node:20-alpine
 # Set working directory
 WORKDIR /app
 
-# Copy package.json and lock file
-COPY package.json package-lock.json* yarn.lock* pnpm-lock.yaml* ./
+# Copy package.json only
+COPY package.json ./
 
 # Install dependencies
 RUN npm install --production
