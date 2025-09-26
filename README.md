@@ -23,7 +23,8 @@ MoneyTime is a comprehensive financial management application that helps users:
 - ✅ SEO optimized with proper metadata
 - ✅ Fast performance with Turbopack
 - ✅ Original MoneyTime branding and assets
-- ✅ App screenshots and promotional images
+- ✅ Authentic iPhone app screenshots in mockup frames
+- ✅ Interactive demo section with actual app interface
 
 ## Getting Started
 

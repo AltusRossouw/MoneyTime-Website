@@ -1,9 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import BudgetOverview from "../components/BudgetOverview";
-import TrendsChart from "../components/TrendsChart";
-import SpendingAnalysis from "../components/SpendingAnalysis";
-import TransactionList from "../components/TransactionList";
+import AppScreenshots from "../components/AppScreenshots";
 
 export default function Home() {
   return (
@@ -123,39 +120,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Interactive Demo Section */}
-        <section id="demo" className="py-20 bg-gradient-to-br from-blue-500 to-purple-600">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">See MoneyTime in Action</h2>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed">Explore the actual app interface and discover how easy budgeting can be</p>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-4">📊 Budgeting Made Easy</h3>
-                <BudgetOverview />
-              </div>
-              
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-4">📈 Trends Over Time</h3>
-                <TrendsChart />
-              </div>
-            </div>
-            
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-4">🎯 Understand Your Spending</h3>
-                <SpendingAnalysis />
-              </div>
-              
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-4">💳 Track Your Spending</h3>
-                <TransactionList />
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* App Screenshots Demo Section */}
+        <AppScreenshots />
 
         {/* CTA Section */}
         <section id="download" className="py-16 text-center">
