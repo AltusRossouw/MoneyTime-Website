@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  moneytime:
+    build: .
+    ports:
+      - "5332:5332"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped

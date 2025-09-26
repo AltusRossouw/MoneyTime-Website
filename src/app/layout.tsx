@@ -38,6 +38,11 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
         <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5" />
         <link rel="shortcut icon" href="/images/favicon.ico" />
+        <script
+          defer
+          src="https://umami.intellixlabs.co.za/script.js"
+          data-website-id="8360cb03-b7f8-4c23-85fc-bc7456a8ac3a"
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
