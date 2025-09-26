@@ -157,7 +157,7 @@ export default function Home() {
               Terms of Use & Privacy Policy
             </Link>
           </div>
-          <p className="text-gray-500">© 2024 MoneyTime. All rights reserved.</p>
+          <p className="text-gray-500">© 2025 MoneyTime. All rights reserved.</p>
         </div>
       </footer>
     </div>

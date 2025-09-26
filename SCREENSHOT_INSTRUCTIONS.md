@@ -1,34 +1,15 @@
-# How to Add iPhone Screenshots
+# MoneyTime App Screenshots
 
-To replace the placeholder screenshots with the actual iPhone screenshots, follow these steps:
+The website now displays the complete iPhone mockup screenshots with headings and blue gradient backgrounds exactly as designed.
 
-## Step 1: Save the iPhone Screenshots
+## Current Screenshots
 
-From your attachment images, save them as:
+The following screenshot files are being used:
 
-1. **First screenshot** (Budgeting Made Easy - blue background with phone showing overview) 
-   → Save as: `public/images/screenshots/budgeting-made-easy.png`
-
-2. **Second screenshot** (Trends Over Time - blue background with phone showing trends chart)
-   → Save as: `public/images/screenshots/trends-over-time.png`
-
-3. **Third screenshot** (Understand Your Spending - blue background with phone showing pie chart)
-   → Save as: `public/images/screenshots/understand-spending.png`
-
-4. **Fourth screenshot** (Track Your Spending - blue background with phone showing transactions)
-   → Save as: `public/images/screenshots/track-spending.png`
-
-## Step 2: Optimal Image Settings
-
-For best results, crop/resize the images to:
-- **Format**: PNG (for transparency support)
-- **Width**: 400-600px (the component will auto-resize)
-- **Height**: 800-1200px (maintaining iPhone aspect ratio)
-- **Background**: Keep the blue gradient background from the original
-
-## Step 3: After Adding Images
-
-Once you've saved the images, the website will automatically display them in place of the placeholders. The iPhone mockup frames will perfectly showcase your actual app screenshots.
+1. **budgeting-made-easy.png** - "Budgeting Made Easy" with iPhone showing overview screen
+2. **trends-over-time.png** - "Trends Over Time" with iPhone showing analytics
+3. **understand-spending.png** - "Understand Your Spending" with iPhone showing pie chart
+4. **track-spending.png** - "Track Your Spending" with iPhone showing transactions
 
 ## File Structure
 
@@ -36,13 +17,22 @@ Once you've saved the images, the website will automatically display them in pla
 public/
 └── images/
     ├── screenshots/
-    │   ├── budgeting-made-easy.png     ← Replace this
-    │   ├── trends-over-time.png        ← Replace this
-    │   ├── understand-spending.png     ← Replace this
-    │   └── track-spending.png          ← Replace this
+    │   ├── budgeting-made-easy.png     ✅ Complete mockup image
+    │   ├── trends-over-time.png        ✅ Complete mockup image  
+    │   ├── understand-spending.png     ✅ Complete mockup image
+    │   ├── track-spending.png          ✅ Complete mockup image
+    │   └── app-overview-all-screens.png
     ├── logo.png
     ├── app-store-logo.png
     └── moneytime-app-preview.png
 ```
 
-The website is already set up to display these images beautifully in iPhone mockups with descriptions and feature lists!
+## Display Format
+
+The screenshots are displayed in a clean 2x2 grid layout with:
+- ✅ Full-size mockup images (including iPhone frames and blue backgrounds)
+- ✅ Responsive design that works on all screen sizes
+- ✅ Subtle hover effects and shadows
+- ✅ App Store download call-to-action below
+
+The website automatically displays these complete mockup images exactly as you designed them!
