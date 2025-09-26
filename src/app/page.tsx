@@ -1,102 +1,198 @@
+import Link from "next/link";
 import Image from "next/image";
+import BudgetOverview from "../components/BudgetOverview";
+import TrendsChart from "../components/TrendsChart";
+import SpendingAnalysis from "../components/SpendingAnalysis";
+import TransactionList from "../components/TransactionList";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      {/* Header */}
+      <header className="container mx-auto px-6 py-8">
+        <nav className="flex justify-between items-center">
+          <div className="flex items-center space-x-2">
+            <Image src="/images/logo.png" alt="MoneyTime Logo" width={32} height={32} className="w-8 h-8" />
+            <div className="text-2xl font-bold text-indigo-600">MoneyTime</div>
+          </div>
+          <div className="hidden md:flex space-x-8">
+            <Link href="#features" className="text-gray-600 hover:text-indigo-600 transition-colors">Features</Link>
+            <Link href="#demo" className="text-gray-600 hover:text-indigo-600 transition-colors">Demo</Link>
+            <Link href="#download" className="text-gray-600 hover:text-indigo-600 transition-colors">Download</Link>
+          </div>
+        </nav>
+      </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Hero Section */}
+      <main className="container mx-auto px-6 py-12">
+        <div className="text-center mb-16">
+          <div className="mb-8">
+            <Image src="/images/logo.png" alt="MoneyTime App Icon" width={96} height={96} className="w-24 h-24 mx-auto mb-4 rounded-2xl shadow-lg" />
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            MoneyTime: <span className="text-indigo-600">Spending Tracker</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
+            See what&apos;s safe-to-spend today, track expenses in seconds, set a budget, 
+            and reach your savings goals faster with MoneyTime — your all-in-one budget app & money manager.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link 
+              href="#download" 
+              className="bg-indigo-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition-colors"
+            >
+              Get Started Today
+            </Link>
+            <Link 
+              href="#features" 
+              className="border border-indigo-600 text-indigo-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-indigo-50 transition-colors"
+            >
+              Learn More
+            </Link>
+          </div>
         </div>
+
+        {/* App Preview Section */}
+        <section className="py-16 text-center">
+          <div className="max-w-2xl mx-auto">
+            <Image 
+              src="/images/moneytime-app-preview.png" 
+              alt="MoneyTime App Screenshots" 
+              width={800}
+              height={600}
+              className="w-full h-auto rounded-2xl shadow-2xl"
+            />
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section id="features" className="py-20">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">Everything you need to manage your money</h2>
+            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">MoneyTime turns budgeting into a simple daily habit</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-gradient-to-br from-yellow-100 to-yellow-200 rounded-xl flex items-center justify-center mb-6">
+                <span className="text-3xl">💰</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 leading-tight">All your money in one place</h3>
+              <p className="text-gray-600 leading-relaxed text-base">See your cash, savings, credit cards, and bank accounts — with multi-currency support — all in one app. Add transactions in seconds for a clear picture of your money at all times.</p>
+            </div>
+            
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center mb-6">
+                <span className="text-3xl">📊</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 leading-tight">Budget that keeps you on track</h3>
+              <p className="text-gray-600 leading-relaxed text-base">Set your monthly budget and let MoneyTime guide you day by day. Always know what&apos;s safe-to-spend today and finally stick to it without the guesswork.</p>
+            </div>
+            
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-gradient-to-br from-red-100 to-red-200 rounded-xl flex items-center justify-center mb-6">
+                <span className="text-3xl">🎯</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 leading-tight">Grow savings and reach your goals</h3>
+              <p className="text-gray-600 leading-relaxed text-base">Set your savings target and track your progress with ease. MoneyTime helps you reduce wasteful spending so you can reach your goals faster.</p>
+            </div>
+            
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center mb-6">
+                <span className="text-3xl">📈</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 leading-tight">See where your money goes</h3>
+              <p className="text-gray-600 leading-relaxed text-base">Organize your expenses with simple categories and subcategories. Understand your habits and make smarter choices every day.</p>
+            </div>
+            
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl flex items-center justify-center mb-6">
+                <span className="text-3xl">📱</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 leading-tight">Track expenses in seconds</h3>
+              <p className="text-gray-600 leading-relaxed text-base">Add transactions in seconds for a clear picture of your money at all times. Simple and intuitive interface makes expense tracking effortless.</p>
+            </div>
+            
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl flex items-center justify-center mb-6">
+                <span className="text-3xl">📋</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 leading-tight">Understand your spending better</h3>
+              <p className="text-gray-600 leading-relaxed text-base">Detailed reports show you exactly how you spend over time. Monthly reports and long-term trends help you track your progress.</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Interactive Demo Section */}
+        <section id="demo" className="py-20 bg-gradient-to-br from-blue-500 to-purple-600">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">See MoneyTime in Action</h2>
+            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed">Explore the actual app interface and discover how easy budgeting can be</p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-4">📊 Budgeting Made Easy</h3>
+                <BudgetOverview />
+              </div>
+              
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-4">📈 Trends Over Time</h3>
+                <TrendsChart />
+              </div>
+            </div>
+            
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-4">🎯 Understand Your Spending</h3>
+                <SpendingAnalysis />
+              </div>
+              
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-4">💳 Track Your Spending</h3>
+                <TransactionList />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section id="download" className="py-16 text-center">
+          <div className="bg-white rounded-2xl p-12 shadow-xl">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Start building better money habits today
+            </h2>
+            <p className="text-xl text-gray-600 mb-8">
+              Your budget planner, expense tracker, and money manager in one simple app.
+            </p>
+            <Link 
+              href="https://apps.apple.com/app/id1632869872"
+              className="inline-block hover:opacity-80 transition-opacity"
+            >
+              <Image 
+                src="/images/app-store-logo.png" 
+                alt="Download on the App Store" 
+                width={200}
+                height={67}
+                className="h-16 w-auto"
+              />
+            </Link>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      {/* Footer */}
+      <footer className="bg-white py-8 mt-16">
+        <div className="container mx-auto px-6 text-center">
+          <div className="text-2xl font-bold text-indigo-600 mb-4">MoneyTime</div>
+          <div className="text-gray-600 mb-4">
+            <Link href="https://moneytime.tinybigapps.com/terms" className="hover:text-indigo-600">
+              Terms of Use & Privacy Policy
+            </Link>
+          </div>
+          <p className="text-gray-500">© 2024 MoneyTime. All rights reserved.</p>
+        </div>
       </footer>
     </div>
   );
