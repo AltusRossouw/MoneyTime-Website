@@ -3,7 +3,7 @@ services:
   moneytime:
     build: .
     ports:
-      - "5332:5332"
+      - "5332:3000"
     environment:
       - NODE_ENV=production
     restart: unless-stopped

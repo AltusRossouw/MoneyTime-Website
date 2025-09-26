@@ -19,8 +19,8 @@ RUN npm run build
 # Set environment variables for Next.js production
 ENV NODE_ENV=production
 
-# Expose port 5332
-EXPOSE 5332
+# Expose port 3000
+EXPOSE 3000
 
-# Start Next.js server on port 5332
-CMD ["npx", "next", "start", "-p", "5332"]
+# Start Next.js server on port 3000
+CMD ["npx", "next", "start", "-p", "3000"]
