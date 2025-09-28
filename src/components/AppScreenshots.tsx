@@ -68,19 +68,19 @@ export default function AppScreenshots({ className = "" }: AppScreenshotsProps) 
       </div>
 
       {/* Tablet: 2x2 grid */}
-      <div className="hidden lg:hidden md:grid md:grid-cols-2 gap-6 px-4">
+      <div className="hidden lg:hidden md:grid md:grid-cols-2 gap-8 px-4">
         {screenshots.map((screenshot, index) => (
           <div
             key={screenshot.id}
-            className="group max-w-[280px] mx-auto"
+            className="group max-w-[400px] mx-auto"
           >
-            <div className="relative w-full h-[400px] bg-white rounded-xl shadow-lg group-hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+            <div className="relative w-full h-[600px] bg-white rounded-2xl shadow-xl group-hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
               <Image
                 src={screenshot.image}
                 alt={screenshot.alt}
-                width={280}
-                height={400}
-                className="w-full h-full object-cover rounded-xl"
+                width={400}
+                height={600}
+                className="w-full h-full object-cover rounded-2xl"
                 priority={index < 2}
               />
             </div>
@@ -88,20 +88,20 @@ export default function AppScreenshots({ className = "" }: AppScreenshotsProps) 
         ))}
       </div>
 
-      {/* Desktop: Centered grid layout */}
-      <div className="hidden lg:grid lg:grid-cols-2 xl:grid-cols-4 gap-6 justify-items-center">
+      {/* Desktop: Large grid layout */}
+      <div className="hidden lg:grid lg:grid-cols-2 xl:grid-cols-4 gap-8 justify-items-center px-8">
         {screenshots.map((screenshot, index) => (
           <div
             key={screenshot.id}
-            className="group max-w-[250px] w-full"
+            className="group max-w-[350px] w-full"
           >
-            <div className="relative w-full h-[400px] bg-white rounded-xl shadow-lg group-hover:shadow-xl transition-shadow duration-300 overflow-hidden">
+            <div className="relative w-full h-[650px] bg-white rounded-2xl shadow-xl group-hover:shadow-2xl transition-shadow duration-300 overflow-hidden">
               <Image
                 src={screenshot.image}
                 alt={screenshot.alt}
-                width={250}
-                height={400}
-                className="w-full h-full object-cover rounded-xl"
+                width={350}
+                height={650}
+                className="w-full h-full object-cover rounded-2xl"
                 priority={index < 2}
               />
             </div>
