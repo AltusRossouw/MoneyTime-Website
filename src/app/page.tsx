@@ -49,15 +49,15 @@ export default function Home() {
           </div>
         </div>
 
-        {/* App Preview Section */}
-        <section className="py-16 text-center">
-          <div className="max-w-2xl mx-auto">
+        {/* App Preview Section - Full Width Hero */}
+        <section className="py-24 -mx-4 sm:-mx-6 lg:-mx-8 xl:-mx-16">
+          <div className="w-full">
             <Image 
               src="/images/moneytime-app-preview.png" 
               alt="MoneyTime App Screenshots" 
-              width={800}
-              height={600}
-              className="w-full h-auto rounded-2xl shadow-2xl"
+              width={1400}
+              height={1000}
+              className="w-full h-auto"
             />
           </div>
         </section>
