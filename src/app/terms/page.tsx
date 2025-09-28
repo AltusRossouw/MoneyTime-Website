@@ -52,7 +52,7 @@ export default function TermsOfUse() {
 
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Disclaimer of Warranties & Limitation of Liability</h2>
               <p className="text-gray-600 mb-6">
-                MoneyTime is provided "as is" without warranties of any kind. To the maximum extent permitted by law, the developers disclaim all liability for damages arising from the use or inability to use the app.
+                MoneyTime is provided &quot;as is&quot; without warranties of any kind. To the maximum extent permitted by law, the developers disclaim all liability for damages arising from the use or inability to use the app.
               </p>
 
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Intellectual Property</h2>

@@ -52,12 +52,12 @@ export default function PrivacyPolicy() {
 
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Third-Party Services</h2>
               <p className="text-gray-600 mb-6">
-                MoneyTime does not integrate with any third-party analytics, advertising, or data collection services. The only external service we use is Apple's iCloud for optional data synchronization, which is entirely under your control.
+                MoneyTime does not integrate with any third-party analytics, advertising, or data collection services. The only external service we use is Apple&apos;s iCloud for optional data synchronization, which is entirely under your control.
               </p>
 
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Your Control</h2>
               <p className="text-gray-600 mb-6">
-                You have complete control over your data. You can delete the app at any time, and all your data will be removed from your device. If you're using iCloud sync, you can disable it in your device settings, and your data will remain only on your local device.
+                You have complete control over your data. You can delete the app at any time, and all your data will be removed from your device. If you&apos;re using iCloud sync, you can disable it in your device settings, and your data will remain only on your local device.
               </p>
 
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Us</h2>
