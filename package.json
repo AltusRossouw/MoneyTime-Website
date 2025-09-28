@@ -15,7 +15,11 @@
     "docker:prod": "docker-compose -f docker-compose.prod.yml up -d",
     "docker:prod:build": "docker-compose -f docker-compose.prod.yml up --build -d",
     "docker:prod:down": "docker-compose -f docker-compose.prod.yml down",
-    "docker:prod:logs": "docker-compose -f docker-compose.prod.yml logs -f"
+    "docker:prod:logs": "docker-compose -f docker-compose.prod.yml logs -f",
+    "dockerhub:build": "docker build -t altusrossouw/moneytime-app:latest .",
+    "dockerhub:push": "docker push /moneYOUR_DOCKERHUB_USERNAMEytime-app:latest",
+    "dockerhub:deploy": "npm run dockerhub:build && npm run dockerhub:push",
+    "dockerhub:tag": "docker tag moneytime-app YOUR_DOCKERHUB_USERNAME/moneytime-app:latest"
   },
   "dependencies": {
     "next": "15.5.4",
