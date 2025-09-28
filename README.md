@@ -4,7 +4,7 @@ A modern, responsive landing page for the MoneyTime spending tracker app.
 
 ## 🚀 Live Demo
 
-Visit the live site: [moneytime.app](https://moneytime.intellixlabs.co.za)
+Visit the live site: [moneytime.intellixlabs.co.za](https://moneytime.intellixlabs.co.za)
 
 ## 🛠️ Tech Stack
 
