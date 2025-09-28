@@ -4,18 +4,18 @@ import AppScreenshots from "../components/AppScreenshots";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="min-h-screen" style={{ backgroundColor: '#d9f1fe' }}>
       {/* Header */}
       <header className="container mx-auto px-6 py-8">
         <nav className="flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <Image src="/images/logo.png" alt="MoneyTime Logo" width={32} height={32} className="w-8 h-8" />
-            <div className="text-2xl font-bold text-indigo-600">MoneyTime</div>
+            <div className="text-2xl font-bold" style={{ color: '#00A1F5' }}>MoneyTime</div>
           </div>
           <div className="hidden md:flex space-x-8">
-            <Link href="#features" className="text-gray-600 hover:text-indigo-600 transition-colors">Features</Link>
-            <Link href="#demo" className="text-gray-600 hover:text-indigo-600 transition-colors">Demo</Link>
-            <Link href="#download" className="text-gray-600 hover:text-indigo-600 transition-colors">Download</Link>
+            <Link href="#features" className="text-gray-600 transition-colors hover:text-[#00A1F5]">Features</Link>
+            <Link href="#demo" className="text-gray-600 transition-colors hover:text-[#00A1F5]">Demo</Link>
+            <Link href="#download" className="text-gray-600 transition-colors hover:text-[#00A1F5]">Download</Link>
           </div>
         </nav>
       </header>
@@ -27,7 +27,7 @@ export default function Home() {
             <Image src="/images/logo.png" alt="MoneyTime App Icon" width={96} height={96} className="w-24 h-24 mx-auto mb-4 rounded-2xl shadow-lg" />
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            MoneyTime: <span className="text-indigo-600">Spending Tracker</span>
+            MoneyTime: <span style={{ color: '#00A1F5' }}>Spending Tracker</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
             See what&apos;s safe-to-spend today, track expenses in seconds, set a budget, 
@@ -36,13 +36,15 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link 
               href="#download" 
-              className="bg-indigo-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition-colors"
+              className="text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors hover:opacity-90"
+              style={{ backgroundColor: '#00A1F5' }}
             >
               Get Started Today
             </Link>
             <Link 
               href="#features" 
-              className="border border-indigo-600 text-indigo-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-indigo-50 transition-colors"
+              className="px-8 py-4 rounded-lg text-lg font-semibold transition-colors hover:opacity-90"
+              style={{ border: '2px solid #00A1F5', color: '#00A1F5' }}
             >
               Learn More
             </Link>
@@ -151,13 +153,13 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-white py-8 mt-16">
         <div className="container mx-auto px-6 text-center">
-          <div className="text-2xl font-bold text-indigo-600 mb-4">MoneyTime</div>
+          <div className="text-2xl font-bold mb-4" style={{ color: '#00A1F5' }}>MoneyTime</div>
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 mb-4">
-            <Link href="/terms" className="text-gray-600 hover:text-indigo-600 transition-colors">
+            <Link href="/terms" className="text-gray-600 transition-colors hover:text-[#00A1F5]">
               Terms of Use
             </Link>
             <span className="hidden sm:block text-gray-400">•</span>
-            <Link href="/privacy" className="text-gray-600 hover:text-indigo-600 transition-colors">
+            <Link href="/privacy" className="text-gray-600 transition-colors hover:text-[#00A1F5]">
               Privacy Policy
             </Link>
           </div>

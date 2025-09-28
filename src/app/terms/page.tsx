@@ -3,18 +3,18 @@ import Image from "next/image";
 
 export default function TermsOfUse() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div className="min-h-screen" style={{ backgroundColor: '#d9f1fe' }}>
       {/* Header */}
       <header className="container mx-auto px-6 py-8">
         <nav className="flex justify-between items-center">
           <Link href="/" className="flex items-center space-x-2">
             <Image src="/images/logo.png" alt="MoneyTime Logo" width={32} height={32} className="w-8 h-8" />
-            <div className="text-2xl font-bold text-indigo-600">MoneyTime</div>
+            <div className="text-2xl font-bold" style={{ color: '#00A1F5' }}>MoneyTime</div>
           </Link>
           <div className="hidden md:flex space-x-8">
-            <Link href="/#features" className="text-gray-600 hover:text-indigo-600 transition-colors">Features</Link>
-            <Link href="/#demo" className="text-gray-600 hover:text-indigo-600 transition-colors">Demo</Link>
-            <Link href="/#download" className="text-gray-600 hover:text-indigo-600 transition-colors">Download</Link>
+            <Link href="/#features" className="text-gray-600 transition-colors hover:text-[#00A1F5]">Features</Link>
+            <Link href="/#demo" className="text-gray-600 transition-colors hover:text-[#00A1F5]">Demo</Link>
+            <Link href="/#download" className="text-gray-600 transition-colors hover:text-[#00A1F5]">Download</Link>
           </div>
         </nav>
       </header>
@@ -25,7 +25,7 @@ export default function TermsOfUse() {
           {/* Page Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Terms of <span className="text-indigo-600">Use</span>
+              Terms of <span style={{ color: '#00A1F5' }}>Use</span>
             </h1>
             <p className="text-lg text-gray-600">
               Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
@@ -82,7 +82,8 @@ export default function TermsOfUse() {
           <div className="text-center mt-12">
             <Link 
               href="/" 
-              className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+              className="inline-flex items-center px-6 py-3 text-white rounded-lg font-semibold transition-colors hover:opacity-90"
+              style={{ backgroundColor: '#00A1F5' }}
             >
               ← Back to Home
             </Link>
