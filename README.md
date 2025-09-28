@@ -1,119 +1,118 @@
-# MoneyTime - Next.js Financial Management App
+# MoneyTime Landing Page
 
-A modern rebuild of the MoneyTime website (moneytime.tinybigapps.com) using Next.js 14+ with TypeScript and Tailwind CSS.
+A modern, responsive landing page for the MoneyTime spending tracker app.
 
-## About MoneyTime
+## 🚀 Live Demo
 
-MoneyTime is a comprehensive financial management application that helps users:
+Visit the live site: [moneytime.app](https://moneytime.app)
 
-- **Track Daily Spending**: See what's safe-to-spend today with daily guidance
-- **Budget Management**: Set monthly budgets and stick to them without guesswork
-- **Savings Goals**: Track progress and reduce wasteful spending to reach goals faster
-- **Multi-Account Support**: Manage cash, savings, credit cards, and bank accounts with multi-currency support
-- **Expense Categorization**: Organize expenses with simple categories and subcategories
-- **Detailed Reports**: Monthly reports and long-term trends to understand spending patterns
+## 🛠️ Tech Stack
 
-## Features
+- **Next.js 15** - React framework
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **Docker** - Containerization
+- **Jest** - Testing
 
-- ✅ Responsive design for mobile and desktop
-- ✅ Modern UI with Tailwind CSS
-- ✅ TypeScript for type safety
-- ✅ Next.js App Router with optimized Image components
-- ✅ Component-based architecture
-- ✅ SEO optimized with proper metadata
-- ✅ Fast performance with Turbopack
-- ✅ Original MoneyTime branding and assets
-- ✅ Authentic iPhone app screenshots in mockup frames
-- ✅ Interactive demo section with actual app interface
+## 📱 Features
 
-## Getting Started
+- ✅ Responsive design (mobile, tablet, desktop)
+- ✅ App screenshot showcase
+- ✅ Terms of Use & Privacy Policy
+- ✅ Docker deployment ready
+- ✅ GitHub Actions CI/CD
 
-### Prerequisites
+## 🚀 Quick Start
 
-- Node.js 18+ 
-- npm, yarn, pnpm, or bun
+### Local Development
 
-### Installation
-
-1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/MoneyTime.git
-cd MoneyTime
-```
-
-2. Install dependencies:
-```bash
+# Install dependencies
 npm install
-```
 
-3. Run the development server:
-```bash
+# Start development server
 npm run dev
+
+# Build for production
+npm run build
+
+# Run tests
+npm run test
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+### Docker Deployment
 
-## Available Scripts
+```bash
+# Build and push to Docker Hub
+npm run dockerhub:deploy
 
-- `npm run dev` - Start development server with Turbopack
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
+# Or build locally
+docker build -t moneytime-app .
+docker run -p 3000:3000 moneytime-app
+```
 
-## Project Structure
+## 📦 Deployment
+
+### Portainer (Recommended)
+
+1. Copy `dockerhub-deployment.yml` to Portainer
+2. Update image name with your Docker Hub username
+3. Deploy the stack
+
+### Manual Docker
+
+```bash
+# Build image
+docker build -t altusrossouw/moneytime-app:latest .
+
+# Push to Docker Hub
+docker push altusrossouw/moneytime-app:latest
+
+# Run container
+docker run -p 3330:3000 altusrossouw/moneytime-app:latest
+```
+
+## 🔧 Configuration
+
+### Environment Variables
+
+- `NODE_ENV=production`
+- `PORT=3000`
+- `HOSTNAME=0.0.0.0`
+
+### Docker Hub Setup
+
+1. Create Docker Hub account
+2. Update `package.json` scripts with your username
+3. Update `dockerhub-deployment.yml` with your image name
+
+## 📁 Project Structure
 
 ```
 src/
-├── app/                 # Next.js App Router pages
-│   ├── layout.tsx      # Root layout with favicon and metadata
-│   ├── page.tsx        # Homepage with MoneyTime branding
-│   └── globals.css     # Global styles
-├── components/         # Reusable React components
-│   ├── Header.tsx      # Navigation header
-│   ├── Footer.tsx      # Site footer
-│   └── FeatureCard.tsx # Feature display card
-public/
-└── images/             # MoneyTime brand assets (scraped from original site)
-    ├── logo.png        # App icon/logo (87KB)
-    ├── moneytime-app-preview.png  # App screenshots (2.3MB)
-    ├── app-store-logo.png         # App Store download badge (20KB)
-    ├── apple-touch-icon.png       # iOS home screen icon (12KB)
-    ├── favicon-32x32.png          # 32x32 favicon (2KB)
-    ├── favicon-16x16.png          # 16x16 favicon (1KB)
-    ├── favicon.ico               # ICO format favicon (15KB)
-    └── safari-pinned-tab.svg     # Safari pinned tab icon (4KB)
+├── app/                    # Next.js pages
+│   ├── page.tsx           # Home page
+│   ├── terms/page.tsx     # Terms of Use
+│   └── privacy/page.tsx   # Privacy Policy
+├── components/            # React components
+└── __tests__/            # Test files
 ```
 
-## Technology Stack
+## 🎨 Customization
 
-- **Framework**: Next.js 15.5.4
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS 4.0
-- **Icons**: Emoji-based (can be replaced with icon library)
-- **Fonts**: System fonts with fallbacks
+- **Colors**: Update Tailwind classes in components
+- **Content**: Edit text in `src/app/page.tsx`
+- **Images**: Replace files in `public/images/`
+- **Styling**: Modify Tailwind classes
 
-## Development Guidelines
+## 📄 License
 
-- Use TypeScript for all components and utilities
-- Follow Next.js App Router conventions
-- Implement responsive design with Tailwind CSS
-- Focus on financial data visualization and user experience
-- Ensure accessibility and performance optimization
+© 2025 MoneyTime. All rights reserved.
 
-## Contributing
+## 👨‍💻 Author
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+[altusrossouw](https://github.com/altusrossouw)
 
-## License
+---
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Original MoneyTime app by TinyBigApps
-- Next.js team for the amazing framework
-- Tailwind CSS for the utility-first CSS framework
+**Built with ❤️ using Next.js and Tailwind CSS**
