@@ -152,9 +152,13 @@ export default function Home() {
       <footer className="bg-white py-8 mt-16">
         <div className="container mx-auto px-6 text-center">
           <div className="text-2xl font-bold text-indigo-600 mb-4">MoneyTime</div>
-          <div className="text-gray-600 mb-4">
-            <Link href="https://moneytime.tinybigapps.com/terms" className="hover:text-indigo-600">
-              Terms of Use & Privacy Policy
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 mb-4">
+            <Link href="/terms" className="text-gray-600 hover:text-indigo-600 transition-colors">
+              Terms of Use
+            </Link>
+            <span className="hidden sm:block text-gray-400">•</span>
+            <Link href="/privacy" className="text-gray-600 hover:text-indigo-600 transition-colors">
+              Privacy Policy
             </Link>
           </div>
           <p className="text-gray-500">© 2025 MoneyTime. All rights reserved.</p>
